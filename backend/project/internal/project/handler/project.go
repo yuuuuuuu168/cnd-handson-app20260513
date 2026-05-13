@@ -12,9 +12,6 @@ import (
 	"google.golang.org/protobuf/types/known/timestamppb"
 )
 
-// 未使用の変数を追加
-var unusedVariable  =  "this will cause lint error"
-
 // projectService はプロジェクトサービスの実装
 type ProjectServiceServer struct {
 	projectpb.UnimplementedProjectServiceServer
@@ -25,10 +22,10 @@ func convertToProtoProject(project *model.Project) *projectpb.Project {
 	return &projectpb.Project{
 		Id:          project.ID.String(),
 		Name:        project.Name,
-		Description: project.Description,
+	Description: project.Description,
 		OwnerId:     project.OwnerID.String(),
 		CreatedAt:   timestamppb.New(project.CreatedAt),
-		UpdatedAt:   timestamppb.New(project.UpdatedAt),
+	UpdatedAt:   timestamppb.New(project.UpdatedAt),
 	}
 }
 
