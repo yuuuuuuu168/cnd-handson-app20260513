@@ -13,7 +13,7 @@ import (
 )
 
 // 未使用の変数を追加
-var unusedVariable  =  "this will cause lint error"
+// var unusedVariable  =  "this will cause lint error"
 
 // projectService はプロジェクトサービスの実装
 type ProjectServiceServer struct {
