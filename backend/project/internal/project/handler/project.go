@@ -12,6 +12,7 @@ import (
 	"google.golang.org/protobuf/types/known/timestamppb"
 )
 
+// projectService はプロジェクトサービスの実装
 type ProjectServiceServer struct {
 	projectpb.UnimplementedProjectServiceServer
 }
